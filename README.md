@@ -1,11 +1,14 @@
 # Image-to-Image
-Cycle Generative Adversarial Network (CycleGAN)
 
 A Python notebook for transforming one style of image into another using a cycle generative adversarial network (CycleGAN). This project transforms between two types of airport security x-ray images: isosurface and transparency.
 
-A CycleGAN is a machine learning framework that allows us to transform between image styles without the need for paired images in the training data. The entire framework consists of four machine learning models: two generators and two discriminators. Each generator transforms images from one domain into another, trying to make the transformed images look as realistic as possible. Each discriminator attempts to discern which images are real and which are fake (created by a generator).
+## Cycle Generative Adversarial Network (CycleGAN)
 
-For example, generator G: X->Y transforms images from the X domain (isosurface) into the Y domain (transparency). Discriminator D: Y->[0, 1] attempts to predict whether or not an image in Y domain is real (output close to 1) or fake (output close to 0). Similarly, there is a generator that transforms from the Y domain to the X domain and a corresponding discriminator for the X domain.
+A CycleGAN is a machine learning framework that allows us to transform between image styles without the need for paired images in the training data. The entire framework consists of four competing machine learning models: two generators and two discriminators. Each generator transforms images from one domain into another, trying to make the transformed images look as realistic as possible. Each discriminator attempts to discern which images are real and which are fake (created by a generator).
+
+### Details
+
+For example, generator G: X->Y transforms images from the X domain (isosurface) into the Y domain (transparency). Discriminator D: Y->[0, 1] attempts to predict whether or not an image in the Y domain is real (output close to 1) or fake (output close to 0). Similarly, there is a generator that transforms from the Y domain to the X domain and a corresponding discriminator for the X domain.
 
 Each generator competes with a discriminator. The goal of a generator is to trick its corresponding discriminator into thinking the generated image is real. The goal of a discriminator is to correctly determine which images are fake and which are real.
 
