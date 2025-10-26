@@ -2,6 +2,8 @@
 
 A Python notebook for transforming one style of image into another using a cycle generative adversarial network (CycleGAN). This project transforms between two types of airport security x-ray images: isosurface and transparency.
 
+The goal is to be able to approximate a new renderization from an old one when the original 3D data is no longer available. This provides additional data for training other machine learning models (think object recognition) on a different style, thereby eliminating the need for expensive training data.
+
 ## Cycle Generative Adversarial Network (CycleGAN)
 
 A CycleGAN is a machine learning framework that allows us to transform between image styles without the need for paired images in the training data. The entire framework consists of four competing machine learning models: two generators and two discriminators. Each generator transforms images from one domain into another, trying to make the transformed images look as realistic as possible. Each discriminator attempts to discern which images are real and which are fake (created by a generator).
