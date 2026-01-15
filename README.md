@@ -1,5 +1,7 @@
 # Image-to-Image
 
+Link to Colab notebook: https://colab.research.google.com/drive/1hON7l2wjEpfAQi4TpcAfA2ga9qZrZ_D7?usp=sharing
+
 A Python notebook for transforming one style of image into another using a cycle generative adversarial network (CycleGAN). This project transforms between two types of airport security x-ray images: isosurface and transparency.
 
 The goal is to be able to approximate a new renderization from an old one when the original 3D data is no longer available. This provides additional data for training other machine learning models (think object recognition) on a different style, thereby eliminating the need for expensive training data.
